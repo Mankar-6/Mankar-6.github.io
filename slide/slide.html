@@ -1,0 +1,101 @@
+<html>
+<head>
+<link rel="stylesheet" href="estilo.css">
+<style>
+* {
+	margin:auto;
+	padding:0px;
+}
+ 
+.main {
+	width:100%;
+	max-width:1100;
+	margin: auto;
+}
+ 
+.slides {
+	width:100%;
+}
+ 
+.slides img {
+	width:100%;
+}
+ 
+.slidesjs-pagination {
+	background:#53e0e8;
+	list-style:none;
+	overflow:none;
+}
+ 
+.slidesjs-pagination li {
+	float:none;
+}
+ 
+.slidesjs-pagination li a {
+	display:none;
+	padding:0px;
+	color:#fff;
+	text-decoration:none;
+}
+ 
+.slidesjs-pagination li a:hover {
+	background:#000;
+}
+ 
+.slides .active {
+	background:#000;
+}
+ 
+.slidesjs-navigation{
+	background:#dd16a5;
+	color:#fff;
+	text-decoration:none;
+	display:none;
+	padding:0px;
+	float:none;
+}
+</style>
+</head>
+<body>
+<div class="main">
+		<div class="slides">
+			<img src="imgn1.png" >
+			<img src="imgn2.png" >
+			<img src="imgn3.png" >
+			<img src="imgn4.png" >
+		</div>
+</div>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.slides.js"></script>
+<script>
+ 
+	$(function(){
+  $(".slides").slidesjs({
+    play: {
+      active: false,
+        // [boolean] Generate the play and stop buttons.
+        // You cannot use your own buttons. Sorry.
+      effect: "slide",
+        // [string] Can be either "slide" or "fade".
+      interval: 3000,
+        // [number] Time spent on each slide in milliseconds.
+      auto: true,
+        // [boolean] Start playing the slideshow on load.
+      swap: false,
+        // [boolean] show/hide stop and play buttons
+      pauseOnHover: false,
+        // [boolean]pause a playing slideshow on hover
+      restartDelay: 2500
+        // [number] restart delay on inactive slideshow
+    
+    }
+  });
+});
+ 
+	</script>
+</body>
+</html>
+
+
+
+
